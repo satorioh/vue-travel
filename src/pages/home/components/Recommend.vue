@@ -2,7 +2,7 @@
   <div class="recommend">
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl" alt="">
         <div class="item-info">
           <p class="item-info-title">{{item.title}}</p>
@@ -17,36 +17,39 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '01',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1603/85/85aa0c000578a01e90.water.jpg_200x200_0ccb4aa8.jpg',
-          title: '拙政园',
-          desc: '江南园林甲天下，苏州园林甲江南'
-        },
-        {
-          id: '02',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1805/6f/6fd1ba315b60e430a3.water.jpg_200x200_16184926.jpg',
-          title: '周庄',
-          desc: '江南园林甲天下，苏州园林甲江南'
-        },
-        {
-          id: '03',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/201405/14/3dfad2bcd30c40e91a15f8b7296d86a6.jpg_200x200_265db173.jpg',
-          title: '同里古镇',
-          desc: '江南园林甲天下，苏州园林甲江南'
-        },
-        {
-          id: '04',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1507/27/6640b07ce9a3dd7d9e37743ff58c1c3f.water.jpg_200x200_d7cd9982.jpg',
-          title: '木渎古镇',
-          desc: '江南园林甲天下，苏州园林甲江南'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
+  // data () {
+  //   return {
+  //     recommendList: [
+  //       {
+  //         id: '01',
+  //         imgUrl: 'http://img1.qunarzz.com/sight/p0/1603/85/85aa0c000578a01e90.water.jpg_200x200_0ccb4aa8.jpg',
+  //         title: '拙政园',
+  //         desc: '江南园林甲天下，苏州园林甲江南'
+  //       },
+  //       {
+  //         id: '02',
+  //         imgUrl: 'http://img1.qunarzz.com/sight/p0/1805/6f/6fd1ba315b60e430a3.water.jpg_200x200_16184926.jpg',
+  //         title: '周庄',
+  //         desc: '江南园林甲天下，苏州园林甲江南'
+  //       },
+  //       {
+  //         id: '03',
+  //         imgUrl: 'http://img1.qunarzz.com/sight/p0/201405/14/3dfad2bcd30c40e91a15f8b7296d86a6.jpg_200x200_265db173.jpg',
+  //         title: '同里古镇',
+  //         desc: '江南园林甲天下，苏州园林甲江南'
+  //       },
+  //       {
+  //         id: '04',
+  //         imgUrl: 'http://img1.qunarzz.com/sight/p0/1507/27/6640b07ce9a3dd7d9e37743ff58c1c3f.water.jpg_200x200_d7cd9982.jpg',
+  //         title: '木渎古镇',
+  //         desc: '江南园林甲天下，苏州园林甲江南'
+  //       }
+  //     ]
+  //   }
+  // }
 }
 </script>
 
