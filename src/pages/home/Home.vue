@@ -41,7 +41,7 @@ export default {
         .then(this.getHomeInfoSuccess)
     },
     getHomeInfoSuccess (res) {
-      console.log(res)
+      // console.log(res)
       res = res.data
       if (res.ret && res.data) {
         this.city = res.data.city
