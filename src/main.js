@@ -23,5 +23,4 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
-
-test
+test2
